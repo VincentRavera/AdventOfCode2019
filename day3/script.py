@@ -3,6 +3,8 @@
 import numpy as np
 import re
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')
 
 
 class Grid():
@@ -237,6 +239,7 @@ if __name__ == '__main__':
     t6 = grid.stepbystep(test61, test62)
     if t6 != 610:
         print("Test 6 failed expected 610 got " + str(t6))
+    grid.showimg()
     print("End Test-U")
 
     # f = open('inputs1.txt')
