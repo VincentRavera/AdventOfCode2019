@@ -31,7 +31,7 @@ def fetch_upper(recipe, counter, waste, material, quantity):
 	if material == 'ORE':
 		counter[material] += quantity
 		return quantity
-	ratio = 1
+	ratio = 0
 	while recipe[material].quantity * ratio < quantity - waste[material]:
 		ratio += 1
 	outputs = 0
