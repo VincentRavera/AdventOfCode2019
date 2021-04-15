@@ -54,11 +54,11 @@ if __name__ == '__main__':
     s2 = 223450
     s3 = 123789
     if not test1(s1):
-        print("test 1 Failed")
+        print("test_p1 1 Failed")
     if test1(s2):
-        print("test 2 Failed")
+        print("test_p1 2 Failed")
     if test1(s3):
-        print("test 3 Failed")
+        print("test_p1 3 Failed")
     count = 0
     for i in range(372304, 847060):
         if test1(i):
@@ -68,11 +68,11 @@ if __name__ == '__main__':
     s5 = 123444
     s6 = 111122
     if not test2(s4):
-        print("test 4 failed")
+        print("test_p1 4 failed")
     if test2(s5):
-        print("test 5 failed")
+        print("test_p1 5 failed")
     if not test2(s6):
-        print("test 6 failed")
+        print("test_p1 6 failed")
     count = 0
     for i in range(372304, 847060):
         if test2(i):

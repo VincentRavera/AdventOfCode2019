@@ -120,5 +120,5 @@ if __name__ == '__main__':
 
     test = OS2('test_1.txt')
     test.test_compute(50000)
-    # test = OrbitalSystem('test2.txt')
-    # test.showEnergy()
+    # test_p1 = OrbitalSystem('test2.txt')
+    # test_p1.showEnergy()

@@ -51,16 +51,44 @@ def get_ORE_for_FUEL(recipe):
 	return fetch_upper(recipe, waste, counter, 'FUEL', 1)
 
 
-def test(path, output):
+def get_ORE_for_X_FUEL(recipe, fuel=0):
+	print("\r", fuel)
+	fuel -= 1
+	counter = defaultdict(lambda: 0)
+	waste = defaultdict(lambda: 0)
+	ore = fetch_upper(recipe, waste, counter, 'FUEL', fuel)
+	return ore
+
+
+def dicothomy(recipe):
+	final_ore = 1000000000000
+	euristic = get_ORE_for_FUEL()
+	init_value = final_ore/euristic
+
+
+
+
+def test_p1(path, output):
 	recipe = parse_recipe(path)
 	if not get_ORE_for_FUEL(recipe) == output:
-		print("Test failed: ", path)
+		print("Test p1 failed: ", path)
+	else:
+		print("Test p1 Successed: ", path)
+
+
+def test_p2(path, output):
+	recipe = parse_recipe(path)
+	#if not get_FUEL_for_ORE(recipe) == output:
+	#	print("Test p2 failed: ", path)
 
 
 if __name__ == '__main__':
-	test('test_1.txt', 165)
-	test('test_2.txt', 13312)
-	test('test_3.txt', 180697)
-	test('test_4.txt', 2210736)
+	test_p1('test_1.txt', 165)
+	test_p1('test_2.txt', 13312)
+	test_p2('test_2.txt', 82892753)
+	test_p1('test_3.txt', 180697)
+	test_p2('test_3.txt', 5586022)
+	test_p1('test_4.txt', 2210736)
+	test_p2('test_4.txt', 460664)
 	final_recipe = parse_recipe('inputs.txt')
 	print(get_ORE_for_FUEL(final_recipe))
